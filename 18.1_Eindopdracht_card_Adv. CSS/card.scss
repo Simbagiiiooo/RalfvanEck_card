@@ -1,0 +1,86 @@
+$color_1: #fff;
+@mixin image_1 {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+}
+@mixin position_1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background: $color_1;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.card {
+  width: 15.7rem;
+  height: 21rem;
+  background: #c3cfe2;
+  @include position_1;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  display: inline-block;
+
+  &__inhoud {
+    width: 14rem;
+    height: 20rem;
+    border-radius: 20px;
+    background: $color_1;
+    @include position_1;
+    transform: translate(-50.5%, -49.5%);
+    box-shadow: 1px 3px 10px 1px #5c7aad;
+    overflow: hidden;
+  }
+  &__top {
+    height: 12rem;
+    background: $color_1;
+    padding: 0rem 1rem;
+    text-align: center;
+  }
+  &__paragraaf {
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #40416d;
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+  }
+  &__bottom {
+    height: 6rem;
+    background: #686de0;
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+  &__image {
+    background: $color_1;
+    @include image_1;
+    padding: 4px;
+    transform: translate(75%, -10%);
+  }
+  &__image img {
+    @include image_1;
+  }
+  &__name {
+    color: $color_1;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding-top: 0.6rem;
+    box-sizing: border-box;
+    line-height: 0.3;
+  }
+  &__webpage {
+    color: #b2c6e9;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    box-sizing: border-box;
+    line-height: 1;
+  }
+}
